@@ -15,6 +15,7 @@ import java.util.Set;
 public class GodCommand implements CommandExecutor {
 
     private final Set<Player> godModePlayers = new HashSet<>();
+    FileConfiguration config = Main.getInstance().getConfig();
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -46,7 +47,12 @@ public class GodCommand implements CommandExecutor {
         }
 
         toggleGodMode(target);
-        sender.sendMessage("god mode " + (godModePlayers.contains(target) ? "activate" : "desactive") + " for " + target.getName());
+        String messageKey = godModePlayers.contains(target) ? "god-mode-target-enable" : "god-mode-target-disable";
+        String message = config.getString("messages." + messageKey, "&aGod mode changed for {player}")
+                .replace("{player}", target.getName());
+
+        ChatUtils.sendMessage(message, sender);
+
         return true;
     }
 
@@ -54,11 +60,14 @@ public class GodCommand implements CommandExecutor {
         if (godModePlayers.contains(player)) {
             godModePlayers.remove(player);
             player.setInvulnerable(false);
-            player.sendMessage("God Mode On.");
+            String GodMode = config.getString("messages.god-mode-enable", "§cGod Mode On");
+            ChatUtils.sendMessage(GodMode, player);
+
         } else {
             godModePlayers.add(player);
             player.setInvulnerable(true);
-            player.sendMessage("God Mode Off.");
+            String GodMode = config.getString("messages.god-mode-disable", "§cGod Mode Off");
+            ChatUtils.sendMessage(GodMode, player);
         }
     }
 }

@@ -76,7 +76,7 @@ public class TpaCommand implements CommandExecutor {
 
 
             }
-        }, 1200L); // 1200 ticks = 60 segundos
+        }, 1200L);
 
         return true;
     }

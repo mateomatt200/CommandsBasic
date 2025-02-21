@@ -17,3 +17,8 @@ messages:
   tpa-received: "&d{player} want to teleport to you. Use /tpaccept to accept or /tpdeny to reject"
   tpa-expired: "&dYour request for teleportation to {target} expired"
   tpa-expired-target: "&dThe teleportation request of {target} expired"
+  god-mode-enable: "&aGod mode enabled"
+  god-mode-disable: "&cGod mode disabled"
+  god-mode-target-enable: "&aYou have enabled god mode for {player}"
+  god-mode-target-disable: "&cYou have disabled god mode for {player}"
+  usage-god: "&cUsage: /god [player]"

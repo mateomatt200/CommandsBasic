@@ -1,0 +1,19 @@
+name: SimpleCommands
+version: '1.0-SNAPSHOT'
+main: com.venned.simplecommands.Main
+api-version: '1.20'
+commands:
+  trash:
+    description: Trash Command
+  tpa:
+    description: Tpa command
+  openinv:
+    description: Open inv
+  god:
+    description: God mode
+  gamemode:
+    description: Game mode
+  fix:
+    description: Fix item
+  enderchest:
+    description: Ender chest

@@ -1,0 +1,9 @@
+com\venned\simplecommands\commands\OpenInvCommand.class
+com\venned\simplecommands\commands\FixCommand.class
+com\venned\simplecommands\commands\GameModeCommand.class
+com\venned\simplecommands\commands\TpaCommand.class
+com\venned\simplecommands\commands\TrashCommand.class
+com\venned\simplecommands\commands\EnderChestCommand.class
+com\venned\simplecommands\commands\GodCommand.class
+com\venned\simplecommands\utils\ChatUtils.class
+com\venned\simplecommands\Main.class
